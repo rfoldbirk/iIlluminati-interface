@@ -1,5 +1,6 @@
 const { clear, log } = console
 const { readFileSync, writeFileSync } = require('fs')
+const Funcs = new require('./helper.js')
 
 clear()
 
@@ -70,7 +71,6 @@ io.on('connection', (socket) => {
 	socket.on('join_game', game_id => {
 		if (this_player.can_join_game()) {
 			this_player.join_game(game_id)
-			
 		}
 	})
 

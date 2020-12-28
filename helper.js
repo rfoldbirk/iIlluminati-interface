@@ -1,3 +1,5 @@
+const { readFileSync, writeFileSync } = require('fs')
+
 const Funcs = {
     makeid: (length) => {
         length = length || 8
