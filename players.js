@@ -8,11 +8,18 @@ class Player {
         this.sid = sid
         this.uuid = Funcs.makeid()
         this.game_id = ''
+
+        this.last_login = new Date().getTime()
     }
 
+
     join_game(game_id) {
-        if (!this.can_join()) return false
+        if (!this.can_join_game()) return false
         this.game_id = game_id
+    }
+
+    leave_game() {
+        this.game_id = ''
     }
 
     can_join_game() {
